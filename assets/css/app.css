@@ -1,0 +1,83 @@
+html, body, svg {
+	height: 100%;
+	margin: 0;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
+main {
+	flex: 1;
+}
+h1 {
+	font-size: 2em;
+	margin: 10px;
+}
+h4.confirmed, h4.deaths {
+	text-align: right;
+}
+.tooltip {
+	background: lightsteelblue;
+	border: 0px;
+	border-radius: 8px;
+	padding: 8px;
+	position: absolute;
+	pointer-events: none;
+}
+#map path {
+	fill: #f0f0f0;
+	stroke: black;
+	stroke-width: 0.2px;
+}
+#map path:hover,
+#map path:focus {
+	cursor: pointer;
+	outline: none;
+	stroke-linecap: square;
+	stroke-width: 1px;
+}
+#map text {
+	font-size: .5em;
+	text-anchor: middle;
+	text-shadow:
+	-1px -1px 3px rgba(255, 255, 255, 0.5),
+	-1px 1px 3px rgba(255, 255, 255, 0.5),
+	1px -1px 3px rgba(255, 255, 255, 0.5),
+	1px 1px 3px rgba(255, 255, 255, 0.5);
+	pointer-events: none;
+}
+#map .scale text {
+	text-anchor: start;
+}
+#graph text,
+#graph rect {
+	cursor: help;
+	pointer-events: all;
+}
+#graph g.bars > g:hover,
+#graph g.bars > g:focus {
+	outline: none;
+	stroke: black;
+	stroke-width: 0.5;
+}
+#graph .xAxis text,
+#graph .yAxis text {
+	font-size: 0.75em;
+}
+#graph .yAxis line {
+	stroke-width: 0.5;
+}
+#graph .xAxis line {
+	stroke: none;
+}
+@media only screen and (min-width: 992px) {
+	#tbl td, #tbl th {
+		text-align: center;
+	}
+	#tbl td:first-child, #tbl th:first-child {
+		text-align: left;
+	}
+	#tbl td:last-child, #tbl th:last-child {
+		text-align: right;
+	}
+}
